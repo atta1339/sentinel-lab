@@ -1,1 +1,1 @@
-Custom Sentinel workbook JSON files providing dashboards and visual insights into identity, endpoint, and network activity.
+Stores custom Sentinel workbook JSON files and notes. These provide dashboards and visual insights into identity, endpoint, and network activity.
