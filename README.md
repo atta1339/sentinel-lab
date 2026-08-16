@@ -27,14 +27,14 @@ The structure mirrors how real security engineering teams organise Sentinel cont
 This repository is structured to reflect a real-world Microsoft Sentinel engineering environment.  
 Each folder represents a core component of detection, investigation, automation, or operational support.
 
-- **analytics-rules/** – Detection rules (YAML)
-- **automation/** – SOAR playbooks (Logic Apps)
-- **workbooks/** – Dashboards and visualizations
-- **hunting-queries/** – KQL hunting queries
-- **watchlists/** – Reference data for enrichment
-- **incidents/** – Triage workflows and investigation notes
-- **troubleshooting/** – Operational and ingestion diagnostics
-- **screenshots/** – Visual evidence of the lab environment
+- **analytics-rules/** – Detection rules (YAML)  
+- **automation/** – SOAR playbooks (Logic Apps)  
+- **workbooks/** – Dashboards and visualizations  
+- **hunting-queries/** – KQL hunting queries  
+- **watchlists/** – Reference data for enrichment  
+- **incidents/** – Triage workflows and investigation notes  
+- **troubleshooting/** – Operational and ingestion diagnostics  
+- **screenshots/** – Visual evidence of the lab environment  
 
 ---
 
@@ -90,7 +90,7 @@ The incident workflow includes:
 - Enrichment steps  
 - Escalation criteria  
 
-This section demonstrates DFIR-style investigative capabilities within Sentinel.
+This section demonstrates DFIR-style investigation capability inside Sentinel.
 
 ---
 
@@ -120,6 +120,87 @@ The `screenshots/` folder contains real images from the Sentinel environment, in
 - Watchlists  
 
 These provide visual proof of the lab’s configuration and functionality.
+
+---
+
+## 🧩 MITRE ATT&CK Mapping
+
+This lab aligns several detections and hunting queries with the MITRE ATT&CK framework:
+
+| Technique ID | Technique Name                     | Detection / Query                          |
+|--------------|------------------------------------|---------------------------------------------|
+| T1059        | Command and Scripting Interpreter   | Suspicious Process Creation (YAML)          |
+| T1078        | Valid Accounts                      | Identity Anomalies (YAML + KQL)             |
+| T1046        | Network Service Scanning            | Network Anomalies (YAML + KQL)              |
+| T1036        | Masquerading                        | Process Hunting (KQL)                       |
+| T1021        | Remote Services                     | Identity Hunting (KQL)                      |
+| T1566        | Phishing                            | Incident Samples (triage workflow)          |
+
+Mapping ATT&CK techniques helps validate coverage and ensures detections align with real adversary behavior.
+
+---
+
+## 🏗 Lab Architecture Overview
+
+The following diagram represents the structure of the Sentinel Lab environment:
+
+**Data Sources → Log Analytics Workspace → Microsoft Sentinel → Detection → Investigation → Automation → Reporting**
+
+**Data Sources**
+- Sysmon (via agent)  
+- Azure AD logs  
+- Network logs (lab simulation)  
+
+**Log Analytics Workspace**
+- Central ingestion point  
+- KQL query engine  
+
+**Microsoft Sentinel**
+- Analytics rules  
+- Hunting queries  
+- Workbooks  
+- Watchlists  
+- Automation (SOAR)  
+- Incidents  
+
+**Automation**
+- Logic Apps for enrichment and tagging  
+
+**Reporting**
+- Workbooks  
+- Screenshots  
+
+This architecture mirrors a real SOC/DFIR environment.
+
+---
+
+## 🔔 Detections Included
+
+| File Name                     | Description                                      | Type     |
+|-------------------------------|--------------------------------------------------|----------|
+| rule-process-creation.yaml    | Detects suspicious process creation events       | Analytics Rule |
+| rule-suspicious-network.yaml  | Detects abnormal network activity                | Analytics Rule |
+| rule-identity-anomalies.yaml  | Detects unusual identity behavior                | Analytics Rule |
+
+---
+
+## ⚙️ Playbooks Included
+
+| File Name                        | Purpose                                         | Trigger Type |
+|----------------------------------|-------------------------------------------------|--------------|
+| playbook-ip-enrichment.json      | Enriches IPs using external intelligence        | Incident Trigger |
+| playbook-auto-tagging.json       | Automatically tags incidents based on criteria  | Incident Trigger |
+| playbook-close-false-positive.json | Closes known false positives automatically     | Incident Trigger |
+
+---
+
+## 🔍 Hunting Queries Included
+
+| File Name                | Purpose                                      | Data Source |
+|--------------------------|----------------------------------------------|-------------|
+| process-hunting.kql      | Identifies suspicious process behavior        | Sysmon      |
+| network-anomalies.kql    | Finds abnormal network patterns               | Network Logs |
+| identity-hunting.kql     | Investigates identity anomalies               | Azure AD    |
 
 ---
 
@@ -165,4 +246,3 @@ This workflow mirrors real SOC/DFIR → Engineering processes.
 
 **Atta (atta1339)**  
 Cybersecurity | SOC/DFIR | Security Engineering | Sentinel | KQL | Automation
-
