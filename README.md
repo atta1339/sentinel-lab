@@ -241,6 +241,76 @@ This workflow mirrors real SOC/DFIR → Engineering processes.
 - GitHub for version control  
 
 ---
+## 🏅 Badges
+
+![Microsoft Sentinel](https://img.shields.io/badge/Microsoft-Sentinel-blue)
+![Azure](https://img.shields.io/badge/Azure-Cloud-blue)
+![KQL](https://img.shields.io/badge/Kusto-Query%20Language-orange)
+![SOC](https://img.shields.io/badge/SOC-Operations-red)
+![DFIR](https://img.shields.io/badge/DFIR-Incident%20Response-purple)
+![Automation](https://img.shields.io/badge/SOAR-Automation-green)
+![GitHub](https://img.shields.io/badge/GitHub-Version%20Control-black)
+
+## 🎯 Skills Demonstrated
+
+- Microsoft Sentinel configuration and engineering  
+- Detection development (YAML analytics rules)  
+- KQL hunting and investigation  
+- SOAR automation using Logic Apps  
+- Workbook dashboard creation  
+- Watchlist management and enrichment  
+- Incident triage and DFIR workflows  
+- Troubleshooting ingestion, connectors, and permissions  
+- GitHub repository structuring and documentation  
+- MITRE ATT&CK mapping and adversary alignment  
+
+## 🌟 Why I Built This Lab
+
+I built this Microsoft Sentinel Lab to strengthen my practical skills in SOC/DFIR and Security Engineering.  
+My goal was to create a real, hands-on environment where I could:
+
+- Develop and test custom detections  
+- Practice KQL hunting and investigation  
+- Build automation workflows that reflect real SOC operations  
+- Document triage processes and engineering workflows  
+- Create a portfolio that demonstrates real-world capability  
+
+This lab represents my commitment to continuous learning and my passion for cybersecurity engineering.
+
+## 🚧 Next Labs to Build (Roadmap)
+
+- Sysmon → Sentinel ingestion pipeline (full lab)  
+- Microsoft Defender for Endpoint integration  
+- Azure AD Identity Protection detections  
+- Threat intelligence ingestion and correlation  
+- Custom parsers and normalisation (ASIM)  
+- UEBA (User Entity Behaviour Analytics) workbook  
+- Advanced SOAR playbooks (multi-step workflows)  
+- MITRE ATT&CK coverage expansion  
+- End-to-end incident simulation lab  
+
+## 🤝 Contributing
+
+This is a personal lab project, but contributions, suggestions, and improvements are welcome.  
+If you would like to propose enhancements, feel free to open an issue or submit a pull request.
+
+## 🔄 Versioning
+
+This project uses GitHub for version control.  
+Major updates are documented through commit history and folder-level notes.
+
+## 📜 License
+
+This project is released under the MIT License.  
+You are free to use, modify, and distribute this lab for learning and research purposes.
+
+## 📬 Contact
+
+For questions, collaboration, or professional inquiries:
+
+**Atta (atta1339)**  
+GitHub: https://github.com/atta1339  
+
 
 ## 📝 Author
 
